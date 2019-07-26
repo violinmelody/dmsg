@@ -54,10 +54,13 @@ depth = -1000;          //draw aboce titlebar
 
 //Button actions (from dll):
 //global.log = ds_list_create();
-window_command_hook(window_command_minimize);
-window_command_hook(window_command_maximize);
-window_command_hook(window_command_restore);
-window_command_hook(window_command_close);
+
+if (os_type == os_windows) {
+    window_command_hook(window_command_minimize);
+    window_command_hook(window_command_maximize);
+    window_command_hook(window_command_restore);
+    window_command_hook(window_command_close);
+}
 </string>
           </argument>
         </arguments>
@@ -145,7 +148,9 @@ if (status = 1) &amp;&amp; (mouse_check_button_released(mb_left)){
             break;
             
         case 3:
-            window_command_run(window_command_minimize);
+            if (os_type == os_windows) {
+                window_command_run(window_command_minimize);
+            }
             break;
             
         default:
@@ -160,11 +165,13 @@ if (status = 1) &amp;&amp; (mouse_check_button_released(mb_left)){
 /*if (window_command_check(window_command_minimize)) trace("Minimize clicked.");
 if (window_command_check(window_command_maximize)) trace("Maximize clicked.");
 */
-if (window_command_check(window_command_restore)) {
-    //trace("Restore clicked.");
-    if (window_get_height() == 0) {
-        // Restoring from minimized state
-        window_command_run(window_command_restore);
+if (os_type = os_windows) {
+    if (window_command_check(window_command_restore)) {
+        //trace("Restore clicked.");
+        if (window_get_height() == 0) {
+            // Restoring from minimized state
+            window_command_run(window_command_restore);
+        }
     }
 }
 /*if (window_command_check(window_command_close)) trace("Close clicked.");

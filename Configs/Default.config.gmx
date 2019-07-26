@@ -2,7 +2,7 @@
 <Config>
   <Options>
     <option_aborterrors>False</option_aborterrors>
-    <option_android_GPU_device>0</option_android_GPU_device>
+    <option_android_GPU_device>1</option_android_GPU_device>
     <option_android_adcolony_ads>0</option_android_adcolony_ads>
     <option_android_advertising_enable>false</option_android_advertising_enable>
     <option_android_advertising_key></option_android_advertising_key>
@@ -10,17 +10,17 @@
     <option_android_amazon_ads>0</option_android_amazon_ads>
     <option_android_amazon_game_circle>0</option_android_amazon_game_circle>
     <option_android_apk_expansion>0</option_android_apk_expansion>
-    <option_android_arch_armv5>True</option_android_arch_armv5>
+    <option_android_arch_armv5>False</option_android_arch_armv5>
     <option_android_arch_armv7>True</option_android_arch_armv7>
-    <option_android_arch_mips>True</option_android_arch_mips>
+    <option_android_arch_mips>False</option_android_arch_mips>
     <option_android_arch_mipsr2>false</option_android_arch_mipsr2>
     <option_android_arch_mipsr2sf>false</option_android_arch_mipsr2sf>
     <option_android_arch_x86>True</option_android_arch_x86>
     <option_android_build_tools_version>23.0.1</option_android_build_tools_version>
     <option_android_build_version>0</option_android_build_version>
-    <option_android_color_depth>0</option_android_color_depth>
+    <option_android_color_depth>1</option_android_color_depth>
     <option_android_compile_sdk_version>23</option_android_compile_sdk_version>
-    <option_android_display_name>Discord Saper</option_android_display_name>
+    <option_android_display_name>Discord Minesweeper Generator</option_android_display_name>
     <option_android_facebook_app_display_name></option_android_facebook_app_display_name>
     <option_android_facebook_appid></option_android_facebook_appid>
     <option_android_facebook_enable>0</option_android_facebook_enable>
@@ -32,7 +32,7 @@
     <option_android_google_play_cloud_save_enable>0</option_android_google_play_cloud_save_enable>
     <option_android_google_play_id></option_android_google_play_id>
     <option_android_google_tracking_id></option_android_google_tracking_id>
-    <option_android_icade_support>-1</option_android_icade_support>
+    <option_android_icade_support>0</option_android_icade_support>
     <option_android_icon_hdpi>Configs\Default\android\icons\icon_hdpi.png</option_android_icon_hdpi>
     <option_android_icon_ldpi>Configs\Default\android\icons\icon_ldpi.png</option_android_icon_ldpi>
     <option_android_icon_mdpi>Configs\Default\android\icons\icon_mdpi.png</option_android_icon_mdpi>
@@ -45,21 +45,21 @@
     <option_android_licensing_key></option_android_licensing_key>
     <option_android_lint>-1</option_android_lint>
     <option_android_major_version>1</option_android_major_version>
-    <option_android_min_sdk_version>9</option_android_min_sdk_version>
+    <option_android_min_sdk_version>11</option_android_min_sdk_version>
     <option_android_minor_version>0</option_android_minor_version>
     <option_android_mmedia_ads>false</option_android_mmedia_ads>
     <option_android_moga>0</option_android_moga>
     <option_android_mopub_ads>0</option_android_mopub_ads>
     <option_android_orient_landscape>True</option_android_orient_landscape>
     <option_android_orient_landscape_flipped>True</option_android_orient_landscape_flipped>
-    <option_android_orient_portrait>True</option_android_orient_portrait>
-    <option_android_orient_portrait_flipped>True</option_android_orient_portrait_flipped>
+    <option_android_orient_portrait>False</option_android_orient_portrait>
+    <option_android_orient_portrait_flipped>False</option_android_orient_portrait_flipped>
     <option_android_orientation>2</option_android_orientation>
     <option_android_ouya_icon>Configs\Default\android\icons\ouyaIcon.png</option_android_ouya_icon>
-    <option_android_package_company>companyname</option_android_package_company>
-    <option_android_package_domain>com</option_android_package_domain>
-    <option_android_package_product>Discord_Saper</option_android_package_product>
-    <option_android_permission_flags>8</option_android_permission_flags>
+    <option_android_package_company>violinmelody</option_android_package_company>
+    <option_android_package_domain>net</option_android_package_domain>
+    <option_android_package_product>dmsg</option_android_package_product>
+    <option_android_permission_flags>0</option_android_permission_flags>
     <option_android_portrait_splash_png>Configs\Default\android\portrait_splash.png</option_android_portrait_splash_png>
     <option_android_push_enable>0</option_android_push_enable>
     <option_android_push_id></option_android_push_id>
@@ -233,14 +233,14 @@
     <option_html5_advertising_type>Supersonic Ads</option_html5_advertising_type>
     <option_html5_allow_fullscreen>True</option_html5_allow_fullscreen>
     <option_html5_alwaysreload>False</option_html5_alwaysreload>
-    <option_html5_browser_title>Created with GameMaker: Studio</option_html5_browser_title>
-    <option_html5_centergame>False</option_html5_centergame>
+    <option_html5_browser_title>DMSG</option_html5_browser_title>
+    <option_html5_centergame>True</option_html5_centergame>
     <option_html5_facebook_app_display_name></option_html5_facebook_app_display_name>
     <option_html5_facebook_appid></option_html5_facebook_appid>
     <option_html5_facebook_enable>0</option_html5_facebook_enable>
     <option_html5_flurry_enable>0</option_html5_flurry_enable>
     <option_html5_flurry_id></option_html5_flurry_id>
-    <option_html5_foldername>html5game</option_html5_foldername>
+    <option_html5_foldername>DMSG</option_html5_foldername>
     <option_html5_generate_spotify_app>0</option_html5_generate_spotify_app>
     <option_html5_google_analytics_enable>0</option_html5_google_analytics_enable>
     <option_html5_google_tracking_id></option_html5_google_tracking_id>
@@ -342,17 +342,17 @@
     <option_ios_texture_page>1024</option_ios_texture_page>
     <option_ios_use_test_ads>false</option_ios_use_test_ads>
     <option_lastchanged></option_lastchanged>
-    <option_linux_display_name>Discord Saper</option_linux_display_name>
+    <option_linux_display_name>Discord Minesweeper Generator</option_linux_display_name>
     <option_linux_enable_steam>0</option_linux_enable_steam>
     <option_linux_fullscreen>0</option_linux_fullscreen>
-    <option_linux_homepage>http://www.Discord_Saper.com</option_linux_homepage>
+    <option_linux_homepage>http://violinmelody.net</option_linux_homepage>
     <option_linux_icon>Configs\Default\linux\icon64.png</option_linux_icon>
     <option_linux_interpolate>-1</option_linux_interpolate>
-    <option_linux_long_desc>Discord Saper</option_linux_long_desc>
+    <option_linux_long_desc></option_linux_long_desc>
     <option_linux_maintainer_email></option_linux_maintainer_email>
     <option_linux_scale>-1</option_linux_scale>
     <option_linux_screenkey>-1</option_linux_screenkey>
-    <option_linux_short_desc>Discord Saper</option_linux_short_desc>
+    <option_linux_short_desc>Discord Minesweeper Generator</option_linux_short_desc>
     <option_linux_sizeable>0</option_linux_sizeable>
     <option_linux_splash_png>Configs\Default\linux\splash.png</option_linux_splash_png>
     <option_linux_steam_app_id>0</option_linux_steam_app_id>

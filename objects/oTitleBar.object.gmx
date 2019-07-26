@@ -68,7 +68,6 @@ tiltXAmount = 2;                                                //  - tilt lengt
 
 //Bars settings:
 titleBarHeight = 45;
-srvBarWidth = 80;
 
 //Create titlebar buttons:
 for (i=0; i&lt;3; i++){
