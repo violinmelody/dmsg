@@ -41,7 +41,7 @@ if (_h <= 0) _h = _w;
 if (_e = "") _e = choose("boom","fire","broken_heart","hammer","skull","skull_crossbones");
 
 if (_n) {       //make sure to draw proper empty field depending on number tiles setting (if on, draw white square, else generate whatever you want)
-    if (_p = "") _p = "stop_button";
+    if (_p = "") _p = "white_large_square";
 } else {
     if (_p = "") _p = choose(choose("purple_","green_","blue_","green_","black_","yellow_","")+"heart","ok_hand","white_check_mark");
 }
