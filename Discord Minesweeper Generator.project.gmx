@@ -32,6 +32,7 @@
     </sprites>
     <sprites name="Info Screen">
       <sprite>sprites\sInfo</sprite>
+      <sprite>sprites\sInfoBg</sprite>
       <sprite>sprites\sLogo</sprite>
       <sprite>sprites\sAuthor</sprite>
     </sprites>
@@ -75,7 +76,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\roomSelector</room>
     <room>rooms\room0</room>
+    <room>rooms\roomAndroid</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

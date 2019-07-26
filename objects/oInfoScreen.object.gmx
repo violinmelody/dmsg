@@ -104,7 +104,7 @@ instance_destroy();
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="5">
+    <event eventtype="6" enumb="54">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -144,7 +144,8 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(sInfo,0,x,y);
+            <string>draw_sprite_stretched(sInfoBg,0,x,y,room_width,room_height);
+draw_sprite(sInfo,0,x,y);
 draw_set_halign(fa_right);
 draw_text_colour(room_width-10,room_height-25,"1.0.0",c,c,c,c,1);
 draw_set_halign(fa_left);
