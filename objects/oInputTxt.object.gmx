@@ -175,17 +175,17 @@ alarm[1] = 20;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (os_type == os_android) {
+            <string>//if (os_type == os_android) {
     if (inputType) {
         aStringValue = get_string_async("Text:",global.value[inputID]);
-        global.value[inputID] = aStringValue;
+        global.value[inputID] = "";
     } else {
         aRealValue = get_integer_async("Number:",global.value[inputID]);
-        global.value[inputID] = aRealValue;
+        global.value[inputID] = 0;
     }
-} else {
-    writing = 1;
-}
+//} else {
+//    writing = 1;
+//}
 </string>
           </argument>
         </arguments>
@@ -215,7 +215,7 @@ if (inputType) {
         if ds_map_find_value(async_load, "status") {
             if (ds_map_find_value(async_load, "result") != "") {
                 global.value[inputID] = string(ds_map_find_value(async_load, "result"));
-                show_message(global.value[inputID]);
+                show_debug_message(global.value[inputID]);
             } else {
                 global.value[inputID] = "";
             }
@@ -226,7 +226,7 @@ if (inputType) {
         if ds_map_find_value(async_load, "status") {
             if (real(ds_map_find_value(async_load, "result")) &gt; 0) &amp;&amp; (real(ds_map_find_value(async_load, "result")) &lt;= maxVal) {
                 global.value[inputID] = real(ds_map_find_value(async_load, "result"));
-                show_message(string(global.value[inputID]));
+                show_debug_message(string(global.value[inputID]));
             } else {
                 global.value[inputID] = 0;
             }
