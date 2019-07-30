@@ -175,7 +175,7 @@ alarm[1] = 20;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if (os_type == os_android) {
+            <string>if (os_type == os_android) {
     if (inputType) {
         aStringValue = get_string_async("Text:",global.value[inputID]);
         global.value[inputID] = "";
@@ -183,9 +183,9 @@ alarm[1] = 20;
         aRealValue = get_integer_async("Number:",global.value[inputID]);
         global.value[inputID] = 0;
     }
-//} else {
-//    writing = 1;
-//}
+} else {
+    writing = 1;
+}
 </string>
           </argument>
         </arguments>
