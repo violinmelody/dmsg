@@ -46,6 +46,7 @@ inputID = 0;    //define it in creation code of object placed in the room
                 //use array :3
 inputType = 1;  //0 - numbers; 1 - text;
 maxVal = 1;     //max value (for numbers only)
+iLength = 20;   //max input length
 
 aValue = "";    //used for async dialog
 
@@ -136,11 +137,16 @@ alarm[1] = 20;
         else {
             if (real(keyboard_string) &lt;= maxVal) &amp;&amp; (real(keyboard_string) &gt; 0) {
                 global.value[inputID] = real(keyboard_string);                  //number input
-            } else {
-                global.value[inputID] = maxVal;
+            //} else {
+            //    global.value[inputID] = maxVal;
             }
         }
-        if string_length(global.value[inputID]) &gt; 10 {global.value[inputID] = string_copy(global.value[inputID], 1, 10); oTitleBar.effectTiltX = 1; oTitleBar.effectTiltY = 1;} //limit to 10
+        if string_length(global.value[inputID]) &gt; iLength {  //limit text length and shake when too many letters
+            global.value[inputID] = string_copy(global.value[inputID], 1, iLength);
+            keyboard_string = global.value[inputID];
+            oTitleBar.effectTiltX = 1;
+            oTitleBar.effectTiltY = 1;
+        }
         if (keyboard_check_pressed(vk_enter)) {writing = 0; keyboard_string = 0;}
     } else {
             //¯\_(ツ)_/¯
@@ -227,10 +233,21 @@ if _id == aValue {
           <argument>
             <kind>1</kind>
             <string>draw_sprite(sprite3,0,x,y);
+
+//Display text in nice way:
 if (writing) {
-    draw_text_colour(x+2,y,string(global.value[inputID])+string(txtCursor),a,a,a,a,1);
+    if (string_length(string(global.value[inputID])) &gt; 10) {    //we need to display it in nice way, and the field is pretty small so we'll cut some of the string and add "..."
+        draw_text_colour(x+2,y,"..." + string_copy(string(global.value[inputID]), 10, iLength) + string(txtCursor),a,a,a,a,1);
+    } else {
+        draw_text_colour(x+2,y,string(global.value[inputID]) + string(txtCursor),a,a,a,a,1);
+    }
 } else {
-    draw_text_colour(x+2,y,string(global.value[inputID]),c,c,c,c,1);
+
+    if (string_length(string(global.value[inputID])) &gt; 10) {    //we need to display it in nice way, and the field is pretty small so we'll cut some of the string and add "..."
+        draw_text_colour(x+2,y,"..." + string_copy(string(global.value[inputID]), 10, iLength),c,c,c,c,1);
+    } else {
+        draw_text_colour(x+2,y,string(global.value[inputID]),c,c,c,c,1);
+    }
 }
 </string>
           </argument>
