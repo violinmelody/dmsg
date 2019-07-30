@@ -48,7 +48,8 @@ inputType = 1;  //0 - numbers; 1 - text;
 maxVal = 1;     //max value (for numbers only)
 iLength = 20;   //max input length
 
-aValue = "";    //used for async dialog
+aRealValue[inputID] = 0;     //used for async dialog
+aStringValue[inputID] = "";  //same
 
 draw_set_font(font0);
 global.value[inputID] = "";
@@ -175,8 +176,13 @@ alarm[1] = 20;
           <argument>
             <kind>1</kind>
             <string>if (os_type == os_android) {
-    if (inputType) {aValue = get_string_async("Text:","");}
-    else           {aValue = get_integer_async("Number:",0);}
+    if (inputType) {
+        aStringValue = get_string_async("Text:",global.value[inputID]);
+        global.value[inputID] = aStringValue;
+    } else {
+        aRealValue = get_integer_async("Number:",global.value[inputID]);
+        global.value[inputID] = aRealValue;
+    }
 } else {
     writing = 1;
 }
@@ -203,12 +209,29 @@ alarm[1] = 20;
           <argument>
             <kind>1</kind>
             <string>var _id = ds_map_find_value(async_load, "id");
-if _id == aValue {
-   if ds_map_find_value(async_load, "status") {
-      if ds_map_find_value(async_load, "result") != "" {
-         global.value[inputID] = ds_map_find_value(async_load, "result");
-      }
-   }
+
+if (inputType) {
+    if _id == aStringValue {
+        if ds_map_find_value(async_load, "status") {
+            if (ds_map_find_value(async_load, "result") != "") {
+                global.value[inputID] = string(ds_map_find_value(async_load, "result"));
+                show_message(global.value[inputID]);
+            } else {
+                global.value[inputID] = "";
+            }
+        }
+    }
+} else {
+    if _id == aRealValue {
+        if ds_map_find_value(async_load, "status") {
+            if (real(ds_map_find_value(async_load, "result")) &gt; 0) &amp;&amp; (real(ds_map_find_value(async_load, "result")) &lt;= maxVal) {
+                global.value[inputID] = real(ds_map_find_value(async_load, "result"));
+                show_message(string(global.value[inputID]));
+            } else {
+                global.value[inputID] = 0;
+            }
+        }
+    }
 }
 </string>
           </argument>
