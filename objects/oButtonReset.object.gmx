@@ -151,8 +151,8 @@ global.value[5] = "";
 global.value[6] = 0;
 global.value[7] = 0;
 
-sound_volume(sndUL,0.5);
-sound_play(sndUL);
+//sound_volume(sndUL,0.5);
+//sound_play(sndUL);
 
 status = 2;
 alarm[0] = 500;

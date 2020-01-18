@@ -151,8 +151,8 @@ if (os_type == os_windows) {
 }
 
 
-sound_volume(sndUJ,0.5);
-sound_play(sndUJ);
+//sound_volume(sndUJ,0.5);
+//sound_play(sndUJ);
 
 status = 2;
 alarm[0] = 500;

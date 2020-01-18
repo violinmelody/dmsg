@@ -140,7 +140,7 @@ alpha = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>url_open('https://ko-fi.com/violinmelody');
+            <string>url_open('https://violinmelody.net/donate/');
 </string>
           </argument>
         </arguments>
