@@ -81,7 +81,7 @@
     <room>rooms\roomAndroid</room>
   </rooms>
   <constants number="1">
-    <constant name="appVersion">"1.1.0"</constant>
+    <constant name="appVersion">"1.1.1"</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
